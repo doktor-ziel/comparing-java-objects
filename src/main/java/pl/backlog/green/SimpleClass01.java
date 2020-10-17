@@ -1,5 +1,7 @@
 package pl.backlog.green;
 
+import java.util.Objects;
+
 public class SimpleClass01 {
     private int a;
 
@@ -21,16 +23,14 @@ public class SimpleClass01 {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) {
-            return true;
-        }
-        if (o == null) {
-            return false;
-        }
-        if (! (o instanceof SimpleClass01)) {
-            return false;
-        }
-        SimpleClass01 s = (SimpleClass01) o;
-        return this.a == s.a;
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        SimpleClass01 that = (SimpleClass01) o;
+        return a == that.a;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(a);
     }
 }
