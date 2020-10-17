@@ -18,4 +18,19 @@ public class SimpleClass01 {
     public void setA(int a) {
         this.a = a;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null) {
+            return false;
+        }
+        if (! (o instanceof SimpleClass01)) {
+            return false;
+        }
+        SimpleClass01 s = (SimpleClass01) o;
+        return this.a == s.a;
+    }
 }
