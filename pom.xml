@@ -7,8 +7,20 @@
   <groupId>pl.backlog.green</groupId>
   <artifactId>comparing-java-objects</artifactId>
   <version>1.0</version>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>14</source>
+                    <target>14</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
-  <name>comparing-java-objects</name>
+    <name>comparing-java-objects</name>
   <url>https://zielony-backlog.pl</url>
 
   <properties>
